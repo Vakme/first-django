@@ -29,6 +29,7 @@
     </h2>
     <form method="POST" class="comment-form">{% csrf_token %}
         {{ form.as_p }}
+        <div class="g-recaptcha" data-sitekey="6LcomQoUAAAAAFQ0TS83INlFmi5zoJLLKo0Dali-"></div>
         <button type="submit" class="save btn btn-default">Save</button>
     </form>
 {% endblock %}
