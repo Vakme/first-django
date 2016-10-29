@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+
+{% block sidebar %}
+                        <h2>Newest posts:</h2>
+
+                        {% for post in posts|slice:":3" %}
+                        <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
+                        <div>{{ post.returnShort }}</div>
+                        {% endfor %}
+{% endblock %}

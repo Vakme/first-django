@@ -31,3 +31,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def countComments(self):
+        return Comment.objects.filter(post_id = self.pk).count()
+
+    def returnShort(self):
+        return self.text[:50] + "..."
